@@ -1,5 +1,6 @@
 ﻿using ArHw3;
 using MathNet.Numerics.LinearAlgebra;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ArHw3;
 
@@ -63,27 +64,40 @@ internal class Program
         // ------------------------------------------------------------------
         Console.WriteLine("\n\n=== PROBLEM 1.5 — Three Images Evaluation ===");
 
+        //        Img 0,0 300,200 800,400 500,500 700,300
+        //Image 1 472,514 928,1222    1377,2377   1614,1688   1152,2146
+        //Image 2 283,506 728,1203    1182,2404   1434,1685   949, 2155
+        //Image 3 492,595 974,1375    1360,2441   1609,1827   1161,2242
+
+        //        Img 0,0 100,100 300,300 500,500 700,700
+        //Image 1 472,514 703,753 1162,1224   1614,1688   2066,2152
+        //Image 2 283,506 507,735 961, 1201   1434,1685   2935,2187
+        //Image 3 492,595 744,875 1206,1381   1609,1827   1920,2231
+
+
+
+
         // TODO: BURAYA GERÇEK NOKTALARINI KOYACAKSIN
         // Image 1 için:
         var sceneTrainImg = new List<Vec2>
         {
             new Vec2(0, 0),
-            new Vec2(1, 1),
-            new Vec2(3, 3),
-            new Vec2(7, 7)
+            new Vec2(300, 200),
+            new Vec2(800, 400),
+            new Vec2(700, 300)
         };
 
         var imageTrainImg1 = new List<Vec2>
         {
             new Vec2(472, 514),
-            new Vec2(703, 753),
-            new Vec2(1162, 1224),
-            new Vec2(2066, 2152)
+            new Vec2(928,1222),
+            new Vec2(1377,2377),
+            new Vec2(1152,2146)
         };
 
         var sceneTestImg = new List<Vec2>
         {
-            new Vec2(5, 5)
+            new Vec2(500, 500)
         };
 
         var imageTestImg1 = new List<Vec2>
@@ -104,13 +118,14 @@ internal class Program
         }
 
         // Image 2 için aynı yapıyı kopyalayıp doldur:
+        //Image 2 283,506 728,1203    1182,2404   1434,1685   949, 2155
 
         var imageTrainImg2 = new List<Vec2>
         {
             new Vec2(283, 506),
-            new Vec2(507, 735),
-            new Vec2(961, 1201),
-            new Vec2(2935, 2187)
+            new Vec2(728,1203),
+            new Vec2(1182,2404),
+            new Vec2(949, 2155)
 
         };
         var imageTestImg2 = new List<Vec2>
@@ -130,13 +145,13 @@ internal class Program
             Console.WriteLine("Image 2 için henüz noktalar doldurulmadı.");
         }
 
-        // Image 3 için de aynı:
+        //Image 3 492,595 974,1375    1360,2441   1609,1827   1161,2242
         var imageTrainImg3 = new List<Vec2>
         {
             new Vec2(492, 595),
-            new Vec2(744, 875),
-            new Vec2(1206, 1381),
-            new Vec2(1920, 2231) 
+            new Vec2(974,1375),
+            new Vec2(1360,2441),
+            new Vec2(1161,2242) 
 
         };
         var imageTestImg3 = new List<Vec2>

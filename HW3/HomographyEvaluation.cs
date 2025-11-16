@@ -11,17 +11,15 @@ public static class HomographyEvaluation
     /// </summary>
     public static Matrix<double> EvaluateForImage(
         string imageName,
-        IList<Vec2> sceneTrain,   // en az 5 nokta
+        IList<Vec2> sceneTrain,   
         IList<Vec2> imageTrain,
-        IList<Vec2> sceneTest,    // hata hesabı için 3 nokta
+        IList<Vec2> sceneTest, 
         IList<Vec2> imageTest)
     {
         Console.WriteLine($"\n=== Evaluation for {imageName} ===");
 
         if (sceneTrain.Count != imageTrain.Count)
             throw new ArgumentException("Train listeleri aynı uzunlukta olmalı.");
-        if (sceneTrain.Count < 5)
-            Console.WriteLine("Uyarı: En az 5 train noktası önerilir.");
 
         if (sceneTest.Count != imageTest.Count)
             throw new ArgumentException("Test listeleri aynı uzunlukta olmalı.");
