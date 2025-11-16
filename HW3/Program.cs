@@ -136,7 +136,7 @@ internal class Program
             new Vec2(492, 595),
             new Vec2(744, 875),
             new Vec2(1206, 1381),
-            new Vec2(1920, 2231)
+            new Vec2(1920, 2231) 
 
         };
         var imageTestImg3 = new List<Vec2>
